@@ -1,0 +1,22 @@
+llm:
+  api_type: "open_llm" # or openai
+  base_url: "http://localhost:11434/v1" # or forward url / other llm url
+  model: "llama3:8b"
+  # api_key: "YOUR_API_KEY"
+
+embedding:
+  api_type: "ollama" # or  ollama / openai.
+  base_url: "http://localhost:11434/v1/embeddings" # or forward url / other llm url
+  # api_key: "YOUR_API_KEY"
+  model: "bge-m3:latest"
+  cache_dir: ""
+  dimensions: 1024
+  max_token_size: 8102
+  embed_batch_size: 128
+  embedding_func_max_async: 16
+
+data_root: "datasets" # Root directory for data
+
+working_dir: ./ # Result directory for the experiment
+exp_name: "test" # Experiment name
+
